@@ -1,0 +1,304 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/**
+ * Mixins File
+ */
+body {
+  font-family: "Segoe UI", "Open Sans", Tahoma, Arial, sans-serif;
+  padding-top: calc( 54px + 40px); }
+
+h1, h2, h3 {
+  margin-bottom: 26px;
+  font-weight: 700; }
+
+h1 {
+  font-size: 40px;
+  line-height: 40px; }
+
+h2 {
+  font-size: 30px;
+  line-height: 32px; }
+
+h3 {
+  font-size: 25px;
+  line-height: 27px; }
+
+.sub-heading {
+  font-family: georgia, serif;
+  margin-top: -20px;
+  font-size: 20px;
+  line-height: 20px;
+  color: #666; }
+
+.button,
+a.button {
+  font-size: 13px;
+  line-height: 15px;
+  font-weight: 700;
+  color: #FFF !important;
+  background: #333;
+  outline: 0;
+  text-decoration: none !important;
+  border-radius: 2px;
+  border: 1px solid;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  padding: 4px 10px;
+  display: inline-block;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+  .button:hover, .button:focus,
+  a.button:hover,
+  a.button:focus {
+    color: #FFF !important; }
+  .button:active,
+  a.button:active {
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.1); }
+  .button.size--small,
+  a.button.size--small {
+    padding: 2px 4px; }
+  .button.size--full,
+  a.button.size--full {
+    display: block; }
+  .button.size--medium,
+  a.button.size--medium {
+    padding: 6px 20px; }
+  .button.size--large,
+  a.button.size--large {
+    padding: 15px 30px; }
+  .button.button--green,
+  a.button.button--green {
+    background: #009E0F; }
+  .button.button--info,
+  a.button.button--info {
+    background: rgba(16, 142, 233, 0.82); }
+    .button.button--info:hover,
+    a.button.button--info:hover {
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.1); }
+  .button.button--blue,
+  a.button.button--blue {
+    background: #2B78E4; }
+  .button.button--yellow,
+  a.button.button--yellow {
+    background: #FFFF00;
+    color: #000 !important; }
+  .button.button--pink,
+  a.button.button--pink {
+    background: #FF4848; }
+  .button.button--delete,
+  a.button.button--delete {
+    background: #C9302C;
+    border-color: #C9302C; }
+
+.error {
+  font-size: 16px;
+  line-height: 16px;
+  padding: 20px 40px;
+  background: #ffe3da;
+  border: 1px solid #ffc3b0;
+  margin: 30px 0;
+  color: #d45831; }
+
+.form--wrapper {
+  margin: 40px 0; }
+
+form .input {
+  margin-bottom: 25px; }
+  form .input:last-child {
+    margin-bottom: 0; }
+
+form input, form textarea, form select {
+  font-family: Arial, Tahoma, ​sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 10px 20px;
+  border: 1px solid #CCC;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 3px; }
+
+form label {
+  display: block;
+  font-size: 18px;
+  line-height: 18px;
+  margin-bottom: 5px;
+  font-weight: 700;
+  cursor: pointer; }
+
+* {
+  box-sizing: border-box; }
+
+.layout--default {
+  margin: 0 auto;
+  width: 700px;
+  max-width: 90%; }
+
+.component--header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 54px;
+  background: #3367d6;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between; }
+  .component--header h1 {
+    font-size: 26px;
+    color: #FFF;
+    line-height: 54px; }
+    .component--header h1 a {
+      color: #FFF;
+      text-decoration: none; }
+  .component--header nav {
+    display: flex; }
+    .component--header nav a {
+      display: block;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      text-transform: uppercase;
+      align-self: center;
+      padding: 0 15px;
+      line-height: 54px;
+      color: #FFF; }
+    .component--header nav a.active {
+      background: rgba(0, 0, 0, 0.2); }
+
+.component--users {
+  margin: 50px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .component--users .user {
+    width: 49%;
+    border: 1px solid #CCC;
+    padding: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+    .component--users .user:hover {
+      background: #ffffc5;
+      border-color: #efef25; }
+    .component--users .user .name {
+      font-size: 24px;
+      line-height: 24px;
+      font-weight: 700; }
+    .component--users .user .email {
+      font-size: 15px;
+      margin: 10px 0; }
+    .component--users .user .todos {
+      font-size: 20px;
+      line-height: 20px; }
+      .component--users .user .todos span {
+        color: #999; }
+
+.component--loading {
+  text-align: center; }
+  .component--loading .loader {
+    margin: 0 auto;
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #3498db;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite; }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+  .component--loading p {
+    margin-top: 12px;
+    font-size: 18px;
+    line-height: 20px; }
+
+.empty--data {
+  margin: 30px 0;
+  padding: 20px;
+  border: 1px solid #CCC;
+  font-size: 20px; }
+
+.component--lists {
+  margin-top: 30px; }
+  .component--lists .list {
+    margin-bottom: 30px;
+    border: 1px solid #CCC; }
+    .component--lists .list .empty {
+      font-size: 20px;
+      color: #666; }
+    .component--lists .list > .title {
+      padding: 10px 20px;
+      background: #2196f3;
+      font-size: 20px;
+      font-weight: 700;
+      color: #FFF; }
+    .component--lists .list .items {
+      padding: 20px; }
+    .component--lists .list .item {
+      padding-bottom: 20px;
+      border-bottom: 1px solid #CCC;
+      margin-bottom: 20px; }
+      .component--lists .list .item:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+        margin-bottom: 0; }
+      .component--lists .list .item .title {
+        font-weight: 700;
+        color: #000; }
+      .component--lists .list .item .description {
+        margin-top: 10px;
+        color: #999; }

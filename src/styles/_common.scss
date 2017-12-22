@@ -1,0 +1,47 @@
+
+$font_family_default: 'Segoe UI', 'Open Sans', Tahoma, Arial, sans-serif;
+$font_family_normal: georgia,serif;
+$font_family_form: Arial, Tahoma, ​sans-serif;
+
+$header_height: 54px;
+
+
+
+body {
+  font-family: $font_family_default;
+  padding-top: calc( #{$header_height} + 40px );
+}
+
+
+
+h1, h2, h3 {
+  margin-bottom: 26px;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 40px;
+}
+
+h2 {
+  font-size: 30px;
+  line-height: 32px;
+}
+
+h3 {
+  font-size: 25px;
+  line-height: 27px;
+}
+
+.sub-heading {
+  font-family: $font_family_normal;
+  margin-top: -20px;
+  font-size: 20px;
+  line-height: 20px;
+  color: #666;
+}
+
+
+
+

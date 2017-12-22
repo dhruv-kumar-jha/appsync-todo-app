@@ -1,0 +1,40 @@
+
+
+.form--wrapper {
+  margin: 40px 0;
+}
+
+
+form {
+
+  .input {
+    margin-bottom: 25px;
+    &:last-child { margin-bottom: 0; }
+  }
+
+  input, textarea, select {
+    font-family: $font_family_form;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 10px 20px;
+    border: 1px solid #CCC;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+
+  label {
+    display: block;
+    font-size: 18px;
+    line-height: 18px;
+    margin-bottom: 5px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+
+}
+
+
+
